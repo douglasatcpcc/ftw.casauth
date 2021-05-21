@@ -85,7 +85,7 @@ class HTTPSConnection(httplib.HTTPConnection):
             self.sock = sock
             self._tunnel()
         self.sock = ssl.wrap_socket(sock,
-                                    ssl_version=ssl.PROTOCOL_TLSv1,
+                                    ssl_version=ssl.PROTOCOL_TLS,
                                     ca_certs=CERT_FILE,
                                     cert_reqs=ssl.CERT_REQUIRED)
         try:
